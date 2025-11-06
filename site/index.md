@@ -3,6 +3,9 @@ layout: default
 title: Home
 permalink: /
 ---
+
+[首页]({{ "/" | relative_url }}) · [所有节目]({{ "/episodes/" | relative_url }})
+
 # {{ site.podcast.name | default: "他乡与故乡 | Cross-cultural Stories" }}
 
 {{ site.podcast.tagline | default: "跨文化的相遇与共鸣｜Stories of identity, belonging, and becoming" }}

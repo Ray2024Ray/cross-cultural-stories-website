@@ -21,10 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      # 🧩 可选：如果模板里有 component-library，需要先用 Node 构建组件
+      # （1）Bookshop 组件构建（模板常见，有才会执行）
       - name: Setup Node (for Bookshop)
         uses: actions/setup-node@v4
         with:
@@ -39,17 +36,30 @@ jobs:
             cd ..
           fi
 
-      # 🧱 用 GitHub 官方 Jekyll 构建器（自带 Ruby/Jekyll，最省心）
-      - name: Build Jekyll site
-        uses: actions/jekyll-build-pages@v1
+      # （2）Ruby/Jekyll 构建站点（不使用 github-pages 限制的构建器）
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Install gems
+        run: |
+          bundle config set path 'vendor/bundle'
+          bundle install --jobs 4 --retry 3
+
+      - name: Build Jekyll site
+        env:
+          JEKYLL_ENV: production
+        run: |
+          # 如果模板要求从子目录构建，可改为：bundle exec jekyll build --source site --destination _site
+          bundle exec jekyll build --trace
+          echo "Built to _site"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: _site
 
   deploy:
     needs: build

@@ -1,6 +1,8 @@
+
 ---
 layout: default
 title: 他乡与故乡 · Things I Took With Me
+permalink: /
 ---
 
 # 他乡与故乡 · Things I Took With Me

@@ -58,7 +58,7 @@ jobs:
           JEKYLL_ENV: production
         working-directory: site
         run: |
-          bundle exec jekyll build --source . --destination ../_site --trace
+          bundle exec jekyll build --source . --destination ../_site --trace --verbose
           echo "Built to _site"
 
       - name: Upload artifact

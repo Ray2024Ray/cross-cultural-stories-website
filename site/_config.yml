@@ -1,8 +1,14 @@
 url: "https://Ray2024Ray.github.io"
 baseurl: "/cross-cultural-stories-website"
 
-title: 他乡与故乡 ｜ Cross-cultural Stories
-description: 跨文化的相遇与共鸣｜Stories of identity, belonging, and becoming
+podcast:
+  name: "他乡与故乡 | Cross-cultural Stories"
+  tagline: "跨文化的相遇与共鸣｜Stories of identity, belonging, and becoming"
+  cover: "/images/podcast-cover.jpg"   # 稍后上传图片
+  spotify_show: "https://open.spotify.com/show/6SNCpFk0GlnuIaLw8D3QGA"
+  apple_show: ""        # 先留空，后续加
+  xiaoyuzhou_show: ""   # 先留空，后续加
+  costbox_show: ""      # 先留空，后续加
 
 plugins:
   - jekyll-bookshop

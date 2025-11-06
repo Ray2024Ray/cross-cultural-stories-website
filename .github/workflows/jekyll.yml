@@ -1,0 +1,62 @@
+name: Build and Deploy Jekyll
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      # （模板常见）如果存在 Bookshop 组件库，先构建
+      - name: Setup Node (for Bookshop)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build component-library (if present)
+        run: |
+          if [ -d "component-library" ]; then
+            cd component-library
+            if [ -f "package-lock.json" ]; then npm ci; else npm i; fi
+            npm run build || npm run build:prod || true
+            cd ..
+          fi
+
+      # 用 GitHub 官方的 Jekyll 构建器（最省心）
+      - name: Build Jekyll site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

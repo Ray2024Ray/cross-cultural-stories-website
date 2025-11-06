@@ -24,7 +24,7 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      # （模板常见）如果存在 Bookshop 组件库，先构建
+      # 🧩 可选：如果模板里有 component-library，需要先用 Node 构建组件
       - name: Setup Node (for Bookshop)
         uses: actions/setup-node@v4
         with:
@@ -39,7 +39,7 @@ jobs:
             cd ..
           fi
 
-      # 用 GitHub 官方的 Jekyll 构建器（最省心）
+      # 🧱 用 GitHub 官方 Jekyll 构建器（自带 Ruby/Jekyll，最省心）
       - name: Build Jekyll site
         uses: actions/jekyll-build-pages@v1
         with:

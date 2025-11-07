@@ -10,7 +10,10 @@ permalink: /
 
 {{ site.podcast.tagline | default: "跨文化的相遇与共鸣｜Stories of identity, belonging, and becoming" }}
 
-<img src="{{ site.podcast.cover | default: '/images/podcast-cover.png' | relative_url }}" alt="Podcast Cover" style="max-width:220px;border-radius:12px;margin:12px 0;">
+<img src="{{ '/images/podcast-cover.png' | relative_url }}" 
+     alt="他乡与故乡 · Cross-cultural Stories 封面" 
+     style="width:100%; border-radius:16px;">
+
 
 **订阅渠道：**  
 - 🔊 [在 Spotify 收听]({{ site.podcast.spotify_show | default: 'https://open.spotify.com/show/6SNCpFk0GlnuIaLw8D3QGA' }})

@@ -39,13 +39,13 @@ permalink: /
 
       </div>
 
-      <!-- 右侧：大图（Hero 封面） -->
-      <div class="c-hero__right col col-6">
-        <div class="c-hero__image">
-          <img src="{{ '/assets/images/hero.jpg' | relative_url }}" 
-               alt="他乡与故乡 · Cross-cultural Stories">
-        </div>
+     <!-- 右侧：封面图 -->
+    <div class="c-hero__right col col-6">
+      <div class="c-hero__image">
+        <img src="{{ '/images/podcast-cover.png' | relative_url }}" alt="Cross-cultural Stories 封面">
       </div>
+    </div>
+
     </div>
   </div>
 </section>

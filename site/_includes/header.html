@@ -5,11 +5,16 @@
       <div class="c-header__inner">
 
         {% unless page.url == "/" %}
-  <div class="logo">
-    <a class="logo__link" href="{{ site.baseurl }}/" style="font-size: 1.1rem; font-weight: 600; text-decoration: none;">
-      他乡与故乡 · Cross-cultural Stories
+  <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+    <img src="{{ '/images/podcast-cover.png' | relative_url }}" 
+         alt="他乡与故乡封面"
+         style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;">
+    <a class="logo__link" href="{{ site.baseurl }}/" 
+       style="font-size: 1.1rem; font-weight: 600; text-decoration: none; color: inherit;">
+       他乡与故乡 · Cross-cultural Stories
     </a>
   </div>
+
   {% endunless %}
 
 

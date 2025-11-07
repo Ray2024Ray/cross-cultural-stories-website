@@ -39,6 +39,17 @@ jobs:
             cd ..
           fi
 
+      - name: Build site assets (npm)
+        working-directory: site
+        run: |
+          if [ -f "package.json" ]; then
+            if [ -f "package-lock.json" ]; then npm ci; else npm i; fi
+            # 兼容不同模板的脚本名：build / prod / compile
+            npm run build || npm run prod || npm run compile || true
+          else
+            echo "No package.json in site/, skipping npm build."
+          fi
+          
       # 在 site/ 目录里安装 Ruby 依赖并构建 Jekyll
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

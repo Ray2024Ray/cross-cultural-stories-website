@@ -1,29 +1,118 @@
----
-layout: default
-title: Home
-permalink: /
----
 
-[首页]({{ "/" | relative_url }}) · [所有节目]({{ "/episodes/" | relative_url }})
+<section class="c-hero">
+  <div class="container">
+    <div class="c-hero__inner row">
+      <!-- 左侧：标题 + 文案 + 按钮 -->
+      <div class="c-hero__left col col-6">
+        <h1 class="c-hero__title">他乡与故乡 · Cross-cultural Stories</h1>
+        <div class="c-hero__description">
+          <p>跨越城市与语言，我们用声音记录那些流动的身份、归属与连接。</p>
+        </div>
+        <!-- 左侧：标题 + 文案 + 订阅链接 -->
+<div class="c-hero__left col col-6">
+  <h1 class="c-hero__title">他乡与故乡 · Cross-cultural Stories</h1>
+  <div class="c-hero__description">
+    <p>跨越城市与语言，我们用声音记录那些流动的身份、归属与连接。</p>
+  </div>
+  
+    <!-- 自动读取配置的订阅渠道 -->
+  <div class="subscribe-section" style="margin-top:28px;">
+    <p style="font-weight:600;margin-bottom:10px;">订阅渠道：</p>
+    <div class="subscribe-buttons" style="display:flex;flex-wrap:wrap;gap:10px;">
+      {% if site.podcast.spotify_show %}
+      <a class="c-button c-button--primary c-button--small" href="{{ site.podcast.spotify_show }}" target="_blank" rel="noopener">🔊 Spotify</a>
+      {% endif %}
+  
+      {% if site.podcast.apple_show %}
+      <a class="c-button c-button--secondary c-button--small" href="{{ site.podcast.apple_show }}" target="_blank" rel="noopener">🍎 Apple Podcasts</a>
+      {% endif %}
+  
+      {% if site.podcast.xiaoyuzhou_show %}
+      <a class="c-button c-button--secondary c-button--small" href="{{ site.podcast.xiaoyuzhou_show }}" target="_blank" rel="noopener">🌟 小宇宙</a>
+      {% endif %}
+  
+      {% if site.podcast.castbox_show %}
+      <a class="c-button c-button--secondary c-button--small" href="{{ site.podcast.castbox_show }}" target="_blank" rel="noopener">📦 Castbox</a>
+      {% endif %}
+    </div>
+  </div>
 
-# {{ site.podcast.name | default: "他乡与故乡 | Cross-cultural Stories" }}
+</div>
 
-{{ site.podcast.tagline | default: "跨文化的相遇与共鸣｜Stories of identity, belonging, and becoming" }}
+      </div>
 
-**订阅渠道：**  
-- 🔊 [在 Spotify 收听]({{ site.podcast.spotify_show | default: 'https://open.spotify.com/show/6SNCpFk0GlnuIaLw8D3QGA' }})
-{% if site.podcast.apple_show %}- 🍎 [Apple Podcasts]({{ site.podcast.apple_show }}){% endif %}
-{% if site.podcast.xiaoyuzhou_show %}- 🌟 [小宇宙]({{ site.podcast.xiaoyuzhou_show }}){% endif %}
+      <!-- 右侧：大图（Hero 封面） -->
+      <div class="c-hero__right col col-6">
+        <div class="c-hero__image">
+          <img src="{{ '/assets/images/hero.jpg' | relative_url }}" 
+               alt="他乡与故乡 · Cross-cultural Stories">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<iframe style="border-radius:12px;margin-top:12px" src="https://open.spotify.com/embed/show/6SNCpFk0GlnuIaLw8D3QGA?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<!-- Latest Episodes（先做 6 张卡片；后面我可以帮你换成自动读取） -->
+<section class="section">
+  <div class="container">
+    <div class="section__info">
+      <div class="section__head">
+        <h2 class="section__title">Latest Episodes</h2>
+        <a class="section__link" href="/episodes/">View all <i class="ion-md-arrow-forward"></i></a>
+      </div>
+      <div class="section__description">
+        <p>最近更新的 6 期节目。</p>
+      </div>
+    </div>
 
-## 最新节目
-{% assign latest = site.episodes | sort: "date" | reverse | slice: 0, 3 %}
-{% if latest and latest.size > 0 %}
-{% for ep in latest %}
-- [{{ ep.title }}]({{ ep.url | relative_url }}) — {{ ep.date | date: "%Y-%m-%d" }} · {{ ep.duration }}
-{% endfor %}
-[查看全部节目 →]({{ "/episodes/" | relative_url }})
-{% else %}
-（还没有节目条目。先新增几期到 `site/collections/_episodes/`）
-{% endif %}
+    <div class="row">
+      <!-- 复制这个卡片块 6 次，替换标题/简介/链接/封面图 -->
+      <div class="col col-4 col-t-6 col-m-12">
+        <article class="c-blog-card">
+          <div class="c-blog-card__inner">
+            <a class="c-blog-card__image" href="https://open.spotify.com/episode/你的ID" target="_blank" rel="noopener">
+              <img src="{{ '/assets/images/ep016.jpg' | relative_url }}" alt="EP016">
+            </a>
+            <div class="c-blog-card__content">
+              <div class="c-blog-card__tags-box">
+                <span class="c-blog-card__tag">Podcast</span>
+                <span class="c-blog-card__tag">Identity</span>
+              </div>
+              <h3 class="c-blog-card__title">
+                <a href="https://open.spotify.com/episode/你的ID" target="_blank" rel="noopener">
+                  EP016｜寻我之旅：一个中国女孩的全球漂流与扎根
+                </a>
+              </h3>
+              <p class="c-blog-card__excerpt">在异国他乡更清晰地看见自己的来处与去处。</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 示例卡片 2 -->
+      <div class="col col-4 col-t-6 col-m-12">
+        <article class="c-blog-card">
+          <div class="c-blog-card__inner">
+            <a class="c-blog-card__image" href="https://open.spotify.com/episode/7vqTCZjvrCChHvCa7rMN6P" target="_blank" rel="noopener">
+              <img src="{{ '/assets/images/ep015.jpg' | relative_url }}" alt="EP015">
+            </a>
+            <div class="c-blog-card__content">
+              <div class="c-blog-card__tags-box">
+                <span class="c-blog-card__tag">Stanford</span>
+                <span class="c-blog-card__tag">Volunteer</span>
+              </div>
+              <h3 class="c-blog-card__title">
+                <a href="https://open.spotify.com/episode/7vqTCZjvrCChHvCa7rMN6P" target="_blank" rel="noopener">
+                  EP015｜文化近距离 | 从斯坦福志愿者看跨文化连接
+                </a>
+              </h3>
+              <p class="c-blog-card__excerpt">十年社区志愿经历里的相遇与陪伴。</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 再复制 4 张卡片…（EP014 ~ EP011 或任意 4 期） -->
+    </div>
+  </div>
+</section>

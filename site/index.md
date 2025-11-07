@@ -12,7 +12,7 @@ permalink: /
 
 <img src="{{ '/images/podcast-cover.png' | relative_url }}" 
      alt="他乡与故乡 · Cross-cultural Stories 封面" 
-     style="width:100%; border-radius:16px;">
+     style="width:100%; border-radius:4px;">
 
 
 **订阅渠道：**  

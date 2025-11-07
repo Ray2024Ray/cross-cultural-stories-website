@@ -17,7 +17,7 @@ permalink: /
     
     <!-- 自动读取配置的订阅渠道 -->
   <div class="subscribe-section" style="margin-top:28px;">
-    <p style="font-weight:600;margin-bottom:10px;">订阅渠道：</p>
+    <p style="font-weight:600;margin-bottom:10px;">订阅平台：</p>
     <div class="subscribe-buttons" style="display:flex;flex-wrap:wrap;gap:10px;">
       {% if site.podcast.spotify_show %}
       <a class="c-button c-button--primary c-button--small" href="{{ site.podcast.spotify_show }}" target="_blank" rel="noopener">🔊 Spotify</a>

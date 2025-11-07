@@ -65,3 +65,12 @@ defaults:
 tag_page_dir: tag
 tag_page_layout: tag_page
 tag_permalink_style: /:title
+
+podcast:
+  name: "他乡与故乡 | Cross-cultural Stories"
+  tagline: "跨文化的相遇与共鸣｜Stories of identity, belonging, and becoming"
+  spotify_show: "https://open.spotify.com/show/6SNCpFk0GlnuIaLw8D3QGA"
+  apple_show: "https://podcasts.apple.com/"
+  xiaoyuzhou_show: "https://www.xiaoyuzhoufm.com/podcast/你的节目ID"
+  castbox_show: "https://castbox.fm/channel/id6702883?country=us"
+

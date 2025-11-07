@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+permalink: /
+---
 
 <section class="c-hero">
   <div class="container">
@@ -8,13 +13,7 @@
         <div class="c-hero__description">
           <p>跨越城市与语言，我们用声音记录那些流动的身份、归属与连接。</p>
         </div>
-        <!-- 左侧：标题 + 文案 + 订阅链接 -->
-<div class="c-hero__left col col-6">
-  <h1 class="c-hero__title">他乡与故乡 · Cross-cultural Stories</h1>
-  <div class="c-hero__description">
-    <p>跨越城市与语言，我们用声音记录那些流动的身份、归属与连接。</p>
-  </div>
-  
+    
     <!-- 自动读取配置的订阅渠道 -->
   <div class="subscribe-section" style="margin-top:28px;">
     <p style="font-weight:600;margin-bottom:10px;">订阅渠道：</p>

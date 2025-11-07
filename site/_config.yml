@@ -4,10 +4,10 @@ baseurl: "/cross-cultural-stories-website"
 podcast:
   name: "他乡与故乡 | Cross-cultural Stories"
   tagline: "跨文化的相遇与共鸣｜Stories of identity, belonging, and becoming"
-  cover: "/images/podcast-cover.jpg"   # 稍后上传图片
+  cover: "/images/podcast-cover.png"   
   spotify_show: "https://open.spotify.com/show/6SNCpFk0GlnuIaLw8D3QGA"
   apple_show: "https://podcasts.apple.com/us/podcast/cross-cultural-stories/id1831182815"        
-  xiaoyuzhou_show: "https://podcaster.xiaoyuzhoufm.com/podcasts/686cb2e71408ff0abb1ee127/home"   
+  xiaoyuzhou_show: "https://www.xiaoyuzhoufm.com/podcast/686cb2e71408ff0abb1ee127"   
   costbox_show: "https://castbox.fm/vh/6702883"      
 
 plugins:

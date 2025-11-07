@@ -48,6 +48,28 @@
       align-items: center;
       gap: 8px;
     }
+      
+    /* 让整个 Hero 居中、更紧凑 */
+    .c-hero__inner { align-items: center; gap: 20px; }
+    .c-hero__left { text-align: center; margin-left: auto; margin-right: auto; }
+    .c-hero__right { display: flex; justify-content: center; }
+  
+    /* 标题在宽屏上一行显示，不换行；小屏允许换行避免溢出 */
+    @media (min-width: 768px) {
+      .c-hero__title { white-space: nowrap; }
+    }
+  
+    /* 标题稍微收一点，减少换行概率（也更像 demo） */
+    .c-hero__title { font-size: clamp(32px, 5vw, 44px); }
+  
+    /* 订阅按钮居中 */
+    .subscribe-section { text-align: center; }
+    .subscribe-buttons { justify-content: center; }
+  
+    /* 卡片区块整体居中感更强（可选） */
+    .section__info .section__head { justify-content: center; gap: 16px; }
+    .section__description { margin-left: auto; margin-right: auto; text-align: center; }
+
   </style>
 
 

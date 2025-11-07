@@ -9,7 +9,8 @@ permalink: /
     <div class="c-hero__inner row">
       <!-- 左侧：标题 + 文案 + 按钮 -->
       <div class="c-hero__left col col-6">
-        <h1 class="c-hero__title">他乡与故乡 · Cross-cultural Stories</h1>
+        <h1 class="c-hero__title">Cross-cultural Stories&nbsp;·&nbsp;他乡与故乡</h1>
+
         <div class="c-hero__description">
           <p>跨越城市与语言，我们用声音记录那些流动的身份、归属与连接。</p>
         </div>
@@ -35,8 +36,6 @@ permalink: /
       {% endif %}
     </div>
   </div>
-
-</div>
 
       </div>
 

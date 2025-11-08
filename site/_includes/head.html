@@ -100,6 +100,49 @@
   justify-content: center;
   gap: 4px;
 }
+    /* 顶部导航条 */
+    .cc-header{
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(242,246,255,0.85);
+      backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid #e8edf6;
+    }
+    .header__inner{
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 10px; max-width: 1200px; margin: 0 auto;
+    }
+    .brand{
+      font-weight: 900; font-size: 20px; letter-spacing: .5px;
+      color: #110e38; text-decoration: none;
+    }
+    .brand:hover{ opacity:.85; }
+    
+    /* 右侧汉堡按钮 */
+    .nav-toggle{
+      display: flex; flex-direction: column; gap: 4px;
+      width: 36px; height: 28px; justify-content: center; align-items: center;
+      border: 0; background: transparent; cursor: pointer;
+    }
+    .nav-toggle span{
+      display:block; width:22px; height:2px; background:#110e38; border-radius:2px;
+    }
+    
+    /* 折叠菜单 */
+    .main-nav{ display: none; padding: 10px 0; }
+    .main-nav.is-open{ display: block; }
+    .main-nav .nav__list{
+      display: flex; gap: 18px; justify-content: flex-end;
+      max-width: 1200px; margin: 0 auto; padding: 0 10px; list-style: none;
+    }
+    .main-nav .nav__link{
+      text-decoration: none; color: #110e38; font-weight: 600; font-size: 15px;
+    }
+    .main-nav .nav__link:hover{ opacity: .75; }
+    
+    /* 小屏改成纵向列表 */
+    @media (max-width: 768px){
+      .main-nav .nav__list{ flex-direction: column; gap: 12px; align-items: flex-end; }
+    }
 
     /* 卡片区块整体居中感更强（可选） */
     .section__info .section__head { justify-content: center; gap: 16px; }

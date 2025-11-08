@@ -24,35 +24,54 @@ You may hear your own story in ours.</p>
     <!-- 自动读取配置的订阅渠道 + 平台图标 -->
     <div class="subscribe-section" style="margin-top:28px;">
       <p style="font-weight:600;margin-bottom:10px;">订阅平台：</p>
-      <div class="subscribe-buttons" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+      
+    <div class="subscribe-section" style="margin-top:28px;">
+      <p style="font-weight:600;margin-bottom:10px;">订阅平台：</p>
+    
+      <!-- 关键：flex-basis 让每个按钮占 50%，两列排布；min-width 适配窄屏 -->
+      <div class="subscribe-buttons"
+           style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+           
+        <!-- 第一行：Spotify + Castbox -->
         {% if site.podcast.spotify_show %}
-        <a class="c-button c-button--primary c-button--small" href="{{ site.podcast.spotify_show }}" target="_blank" rel="noopener">
-          <img src="{{ '/images/spotify-icon.png' | relative_url }}" alt="Spotify" style="height:18px;vertical-align:middle;margin-right:6px;">Spotify
-        </a>
-        {% endif %}
-    
-        {% if site.podcast.apple_show %}
-        <a class="c-button c-button--secondary c-button--small" href="{{ site.podcast.apple_show }}" target="_blank" rel="noopener">
-          <img src="{{ '/images/apple-icon.png' | relative_url }}" alt="Apple Podcasts" style="height:18px;vertical-align:middle;margin-right:6px;">Apple Podcasts
-        </a>
-        {% endif %}
-    
-        {% if site.podcast.xiaoyuzhou_show %}
-        <a class="c-button c-button--secondary c-button--small" href="{{ site.podcast.xiaoyuzhou_show }}" target="_blank" rel="noopener">
-          <img src="{{ '/images/xiaoyuzhou-icon.png' | relative_url }}" alt="小宇宙" style="height:18px;vertical-align:middle;margin-right:6px;">小宇宙
+        <a class="c-button c-button--primary c-button--small"
+           href="{{ site.podcast.spotify_show }}" target="_blank" rel="noopener"
+           style="flex: 1 1 calc(50% - 10px); min-width: 160px; text-align:center;">
+          <img src="{{ '/images/spotify-icon.png' | relative_url }}" alt="Spotify"
+               style="height:18px;vertical-align:middle;margin-right:6px;">Spotify
         </a>
         {% endif %}
     
         {% if site.podcast.castbox_show %}
-        <a class="c-button c-button--secondary c-button--small" href="{{ site.podcast.castbox_show }}" target="_blank" rel="noopener">
-          <img src="{{ '/images/castbox-icon.png' | relative_url }}" alt="Castbox" style="height:18px;vertical-align:middle;margin-right:6px;">Castbox
+        <a class="c-button c-button--secondary c-button--small"
+           href="{{ site.podcast.castbox_show }}" target="_blank" rel="noopener"
+           style="flex: 1 1 calc(50% - 10px); min-width: 160px; text-align:center;">
+          <img src="{{ '/images/castbox-icon.png' | relative_url }}" alt="Castbox"
+               style="height:18px;vertical-align:middle;margin-right:6px;">Castbox
+        </a>
+        {% endif %}
+    
+        <!-- 第二行：Apple Podcasts + 小宇宙 -->
+        {% if site.podcast.apple_show %}
+        <a class="c-button c-button--secondary c-button--small"
+           href="{{ site.podcast.apple_show }}" target="_blank" rel="noopener"
+           style="flex: 1 1 calc(50% - 10px); min-width: 160px; text-align:center;">
+          <img src="{{ '/images/apple-icon.png' | relative_url }}" alt="Apple Podcasts"
+               style="height:18px;vertical-align:middle;margin-right:6px;">Apple Podcasts
+        </a>
+        {% endif %}
+    
+        {% if site.podcast.xiaoyuzhou_show %}
+        <a class="c-button c-button--secondary c-button--small"
+           href="{{ site.podcast.xiaoyuzhou_show }}" target="_blank" rel="noopener"
+           style="flex: 1 1 calc(50% - 10px); min-width: 160px; text-align:center;">
+          <img src="{{ '/images/xiaoyuzhou-icon.png' | relative_url }}" alt="小宇宙"
+               style="height:18px;vertical-align:middle;margin-right:6px;">小宇宙
         </a>
         {% endif %}
       </div>
     </div>
-
       </div>
-
      <!-- 右侧：封面图 -->
     <div class="c-hero__right col col-6">
       <div class="c-hero__image">

@@ -12,8 +12,12 @@ permalink: /
         <h1 class="c-hero__title">Cross-cultural Stories&nbsp;·&nbsp;他乡与故乡</h1>
 
         <div class="c-hero__description">
-          <p>I’m Ray, a chemical engineer turned storyteller. Born in China, I spent 15 years living in South Korea before moving to Stanford, California. In this podcast, I talk to friends, family, and fellow travelers in Mandarin, English, or Korean about the things we bring with us—and the things we leave behind.
+          <p>I’m Ray, a chemical engineer turned storyteller. 
+          
+          Born in China, I spent 15 years living in South Korea before moving to Stanford, California. In this podcast, I talk to friends, family, and fellow travelers in Mandarin, English, or Korean about the things we bring with us—and the things we leave behind.
+
 We explore cultural differences, identity shifts, everyday joy, and emotional struggles.
+
 You may hear your own story in ours.</p>
         </div>
     

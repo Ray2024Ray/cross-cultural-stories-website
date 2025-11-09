@@ -65,7 +65,7 @@ permalink: /
         <a class="section__link" href="{{ '/episodes/' | relative_url }}">View all <i class="ion-md-arrow-forward"></i></a>
       </div>
       <div class="section__description">
-        <p>最近更新的 6 期节目。</p>
+        <p>The Latest 6 Episodes</p>
       </div>
     </div>
 

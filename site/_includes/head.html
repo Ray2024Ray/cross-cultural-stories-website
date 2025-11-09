@@ -27,6 +27,9 @@
 
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 
+  /* 关闭主题自带的页面遮罩，否则正文会被白层挡住 */
+  body:after{visibility:hidden!important;opacity:0!important;pointer-events:none!important;}
+
   <style>
   /* —— 顶部 Hero 区恢复为左右双栏 —— */
   .c-hero { overflow: hidden; }

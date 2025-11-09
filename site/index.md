@@ -70,27 +70,34 @@ permalink: /
     </div>
 
     <div class="row">
-      {% assign latest_eps = site.episodes | sort: 'date' | reverse | slice: 0, 6 %}
-      {% for ep in latest_eps %}
-      <div class="col col-4 col-t-6 col-m-12">
-        <article class="c-blog-card">
-          <div class="c-blog-card__inner">
-            <a class="c-blog-card__image" href="{{ ep.spotify | default: ep.external_url }}" target="_blank" rel="noopener">
-              <img src="{{ ep.cover | default: '/images/podcast-cover.png' | relative_url }}" alt="{{ ep.title | escape }}">
-            </a>
-            <div class="c-blog-card__content">
-              <div class="c-blog-card__tags-box">
-                {% for tag in ep.tags limit:2 %}<span class="c-blog-card__tag">{{ tag }}</span>{% endfor %}
+      {% assign eps_all = site.episodes | default: empty %}
+      {% if eps_all and eps_all != empty %}
+        {% assign latest_eps = eps_all | sort: 'date' | reverse | slice: 0, 6 %}
+        {% for ep in latest_eps %}
+        <div class="col col-4 col-t-6 col-m-12">
+          <article class="c-blog-card">
+            <div class="c-blog-card__inner">
+              <a class="c-blog-card__image" href="{{ ep.spotify | default: ep.external_url }}" target="_blank" rel="noopener">
+                <img src="{{ ep.cover | default: '/images/podcast-cover.png' | relative_url }}" alt="{{ ep.title | escape }}">
+              </a>
+              <div class="c-blog-card__content">
+                <div class="c-blog-card__tags-box">
+                  {% for tag in ep.tags limit:2 %}<span class="c-blog-card__tag">{{ tag }}</span>{% endfor %}
+                </div>
+                <h3 class="c-blog-card__title">
+                  <a href="{{ ep.spotify | default: ep.external_url }}" target="_blank" rel="noopener">{{ ep.title }}</a>
+                </h3>
+                {% if ep.excerpt %}<p class="c-blog-card__excerpt">{{ ep.excerpt }}</p>{% endif %}
               </div>
-              <h3 class="c-blog-card__title">
-                <a href="{{ ep.spotify | default: ep.external_url }}" target="_blank" rel="noopener">{{ ep.title }}</a>
-              </h3>
-              {% if ep.excerpt %}<p class="c-blog-card__excerpt">{{ ep.excerpt }}</p>{% endif %}
             </div>
-          </div>
-        </article>
-      </div>
-      {% endfor %}
+          </article>
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="col col-12">
+          <p>（还没有节目条目。请在 <code>site/collections/_episodes/</code> 新增 6 篇带 <code>title/date/spotify/cover</code> 的 md 文件。）</p>
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>

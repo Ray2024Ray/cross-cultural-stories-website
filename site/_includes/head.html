@@ -149,6 +149,23 @@
       font-weight: 700;
       text-decoration: none;
     }
+    
+    /* ----- Contact description line wrapping ----- */
+    .contact-description {
+      white-space: nowrap;          /* 默认电脑上不换行 */
+      text-align: center;           /* 居中 */
+      font-size: 1.1rem;
+      max-width: 900px;
+      margin: 0 auto 24px;          /* 居中 + 间距 */
+    }
+    
+    /* 小屏幕下允许自动换行 */
+    @media (max-width: 768px) {
+      .contact-description {
+        white-space: normal;
+        padding: 0 12px;            /* 留点边距防止文字贴边 */
+      }
+    }
 
   </style>
 

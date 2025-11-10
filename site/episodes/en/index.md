@@ -1,7 +1,7 @@
 ---
 layout: default
 title: All English episodes
-permalink: /episodes/en/
+permalink: /en/episodes/
 ---
 
 {% assign eps = site.episodes | where: "lang","en" | sort: "date" | reverse %}

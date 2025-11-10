@@ -11,7 +11,7 @@ permalink: /   # 中文默认域名根路径
     <div class="c-hero__inner row">
       <!-- 左侧：标题 + 文案 + 按钮 -->
       <div class="c-hero__left col col-6">
-        <h1 class="c-hero__title">Cross-cultural Stories&nbsp;·&nbsp;他乡与故乡</h1>
+        <h1 class="c-hero__title">他乡与故乡</h1>
 
         <div class="c-hero__description">
           <p>每一个离开故乡的人，都在他乡带着一只看不见的行囊。 里面装着语言、习惯、回忆、偏见，也装着成长与挣扎。 我是 Ray，一位旅居海外的化学工程师+博士。在这档播客里，我将用中文、英文或韩文，采访我身边的朋友、家人和异国旅人，一起聊聊我们在“家乡”与“他乡”之间的故事。 我们会谈文化差异，也会谈孤独；会分享跨文化婚姻、职场挑战，也会记录日常生活中最细小的柔软时刻。希望你能在这里，听见你自己的故事。</p>

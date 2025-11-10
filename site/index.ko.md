@@ -73,7 +73,7 @@ permalink: /ko/
     <div class="row">
       {% assign eps_all = site.episodes | default: empty %}
       {% if eps_all and eps_all != empty %}
-        {% assign latest_eps = eps_all | sort: 'date' | reverse | slice: 0, 6 %}
+        {% assign latest_eps = site.episodes | where: "lang", site.active_lang | sort: "date" | reverse | slice: 0, 6 %}
         {% for ep in latest_eps %}
         <div class="col col-4 col-t-6 col-m-12">
           <article class="c-blog-card">

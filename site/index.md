@@ -99,4 +99,6 @@ permalink: /
       {% endif %}
     </div>
   </div>
+  {% include contact_form.html %}
+
 </section>

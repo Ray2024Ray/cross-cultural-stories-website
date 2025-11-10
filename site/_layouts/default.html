@@ -1,29 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-{% include head.html %}
-
-<body>
-
-    {% if site.data.general_settings.google-analytics %}
-        {% include google-analytics.html %}
-    {% endif %}
-
+  {% include head.html %}
+  <body class="{% if page.url == '/' %}is-home{% endif %}">
     {% include header.html %}
 
-    {{ content }}
-
-    <!--
-        Bookshop components are accessed using the bookshop tag,
-        using the same syntax as the standard Jekyll include tag.
-    -->
-    {% bookshop_include page content_blocks=page.content_blocks page_theme=page.page_theme %}
-
-    <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+    <main>
+      {{ content }}
+    </main>
 
     {% include footer.html %}
-
-    <script src="/js/scripts.js"></script>
-    <script src="/js/common.js"></script>
-</body>
+    <script>
+      // 汉堡开关（确保存在 .nav-toggle 与 .main-nav）
+      document.addEventListener('DOMContentLoaded', function(){
+        var btn = document.querySelector('.nav-toggle');
+        var nav = document.querySelector('.main-nav');
+        if(btn && nav){
+          btn.addEventListener('click', function(){
+            nav.classList.toggle('is-open');
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

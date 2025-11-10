@@ -129,6 +129,27 @@
       white-space: nowrap;
     }
 
+        /* ---- Vertical menu in hamburger ---- */
+    .main-nav{ display:none; padding:12px 0; }
+    .main-nav.is-open{ display:block; }
+    
+    .main-nav .nav__list{
+      display:flex;
+      flex-direction: column;     /* 竖排 */
+      gap: 12px;
+      align-items: flex-end;       /* 靠右对齐；想靠左就改成 flex-start */
+      margin: 0 12px 14px;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .main-nav .nav__link{
+      padding: 8px 10px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
   </style>
 
 

@@ -37,4 +37,5 @@ permalink: /contact/
       </div>
     </form>
   </div>
+  {% include contact_form.html %}
 </section>

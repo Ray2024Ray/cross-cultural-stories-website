@@ -12,10 +12,12 @@
   <!-- 折叠菜单（点击右侧按钮展开/收起） -->
   <nav id="site-nav" class="main-nav" aria-label="Primary">
     <ul class="nav__list">
-      <li class="nav__item"><a class="nav__link" href="{{ '/' | relative_url }}">Home</a></li>
-      <li class="nav__item"><a class="nav__link" href="{{ '/episodes/' | relative_url }}">Episodes</a></li>
-      <li class="nav__item"><a class="nav__link" href="{{ '/blog/' | relative_url }}">Blog</a></li>
-      <li class="nav__item"><a class="nav__link" href="{{ '/about/' | relative_url }}">About</a></li>
+      <li><a class="nav__link" href="{{ '/episodes/' | relative_url }}">All episodes</a></li>
+      <li><a class="nav__link" href="{{ '/episodes/en/' | relative_url }}">All English episodes</a></li>
+      <li><a class="nav__link" href="{{ '/episodes/zh/' | relative_url }}">All Chinese episodes</a></li>
+      <li><a class="nav__link" href="{{ '/episodes/ko/' | relative_url }}">All Korean episodes</a></li>
+      <li><a class="nav__link" href="{{ '/contact/' | relative_url }}">Get in touch</a></li>
     </ul>
+
   </nav>
 </header>

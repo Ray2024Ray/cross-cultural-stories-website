@@ -16,6 +16,22 @@
       <li><a class="nav__link" href="{{ '/episodes/ko/'| relative_url }}">All Korean episodes</a></li>
       <li><a class="nav__link" href="{{ '/contact/'     | relative_url }}">Get in touch</a></li>
     </ul>
+     <div class="main-nav__box">
+    <!-- 你现有的菜单... -->
+  </div>
+
+    <!-- 语言切换 -->
+    <ul class="lang-switch list-reset" style="margin-left:16px;">
+      {% assign labels =  {"zh":"中文", "en":"English", "ko":"한국어"} %}
+      {% for lang in site.languages %}
+        <li style="display:inline-block;margin-left:8px;">
+          <a href="{{ site.baseurl }}/{{ lang }}/"
+             class="nav__link{% if lang == site.active_lang %} cc-active{% endif %}">
+            {{ labels[lang] | default: lang }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
   </nav>
 </header>
 <!-- end header -->

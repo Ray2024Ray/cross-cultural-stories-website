@@ -1,23 +1,21 @@
-<header class="cc-header" role="banner">
-  <div class="container header__inner">
-    <!-- 左侧：回到首页 -->
+<!-- begin header -->
+<header class="cc-header">
+  <div class="header__inner">
     <a class="brand" href="{{ '/' | relative_url }}">Home</a>
 
-    <!-- 右侧：菜单按钮 -->
-    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+    <button class="nav-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 
-  <!-- 折叠菜单（点击右侧按钮展开/收起） -->
-  <nav id="site-nav" class="main-nav" aria-label="Primary">
+  <nav class="main-nav">
     <ul class="nav__list">
-      <li><a class="nav__link" href="{{ '/episodes/' | relative_url }}">All episodes</a></li>
-      <li><a class="nav__link" href="{{ '/episodes/en/' | relative_url }}">All English episodes</a></li>
-      <li><a class="nav__link" href="{{ '/episodes/zh/' | relative_url }}">All Chinese episodes</a></li>
-      <li><a class="nav__link" href="{{ '/episodes/ko/' | relative_url }}">All Korean episodes</a></li>
-      <li><a class="nav__link" href="{{ '/contact/' | relative_url }}">Get in touch</a></li>
+      <li><a class="nav__link" href="{{ '/episodes/'   | relative_url }}">All episodes</a></li>
+      <li><a class="nav__link" href="{{ '/episodes/en/'| relative_url }}">All English episodes</a></li>
+      <li><a class="nav__link" href="{{ '/episodes/zh/'| relative_url }}">All Chinese episodes</a></li>
+      <li><a class="nav__link" href="{{ '/episodes/ko/'| relative_url }}">All Korean episodes</a></li>
+      <li><a class="nav__link" href="{{ '/contact/'     | relative_url }}">Get in touch</a></li>
     </ul>
-
   </nav>
 </header>
+<!-- end header -->
